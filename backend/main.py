@@ -11,7 +11,7 @@ def api():
     pokemon = body.get("pokemon", "").strip().lower()
 
     if not pokemon:
-        return jsonify({"error": "Select a Pokemon"}), 400
+        return jsonify({"error": "Pokemon name is required"}), 400
 
     url = f"https://pokeapi.co/api/v2/pokemon/{pokemon}"
 

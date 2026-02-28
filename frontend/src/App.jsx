@@ -1,46 +1,45 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
 function App() {
-  const [pokemon, setPokemon] = useState('')
-  const [data, setData] = useState(null)
-  const [error, setError] = useState('')
-  const [loading, setLoading] = useState(false)
+  const [pokemon, setPokemon] = useState("");
+  const [data, setData] = useState(null);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    const name = pokemon.trim()
+    const name = pokemon.trim();
     if (!name) {
-      setError('Please enter a Pokemon name')
-      setData(null)
-      return
+      setError("Please enter a Pokemon name");
+      setData(null);
+      return;
     }
 
-    setLoading(true)
-    setError('')
+    setLoading(true);
+    setError("");
 
     try {
-      const res = await fetch('http://127.0.0.1:5000/api', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const res = await fetch("http://127.0.0.1:5000/api", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ pokemon: name }),
-      })
+      });
 
-      const json = await res.json()
+      const json = await res.json();
 
       if (!res.ok) {
-        throw new Error(json.error || 'Request failed')
+        throw new Error(json.error || "Request failed");
       }
-
-      setData(json)
+      setData(json);
     } catch (err) {
-      setData(null)
-      setError(err.message)
+      setData(null);
+      setError(err.message);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <main>
@@ -51,11 +50,12 @@ function App() {
           type="text"
           value={pokemon}
           onChange={(e) => setPokemon(e.target.value)}
-          placeholder="e.g. pikachu"
+          placeholder="Select a Pokemon"
         />
         <button type="submit" disabled={loading}>
-          {loading ? 'Loading...' : 'Search'}
+          {loading ? "Loading..." : "Search"}
         </button>
+        <hr />
       </form>
 
       {error && <p>{error}</p>}
@@ -63,12 +63,14 @@ function App() {
       {data && (
         <section>
           <h2>
-            {data.name} #{data.id}
+            {data.name
+              ? data.name.charAt(0).toUpperCase() + data.name.slice(1)
+              : ""}
           </h2>
           {data.sprite && <img src={data.sprite} alt={data.name} />}
-          <p>Types: {data.types.join(', ')}</p>
-          <ul>
-            {data.stats.map((stat) => (
+          <p>Type: {(data.types ?? []).join(", ")}</p>
+          <ul className="stats-list">
+            {(data.stats ?? []).map((stat) => (
               <li key={stat.name}>
                 {stat.name}: {stat.base_stat}
               </li>
@@ -77,7 +79,7 @@ function App() {
         </section>
       )}
     </main>
-  )
+  );
 }
 
-export default App
+export default App;
