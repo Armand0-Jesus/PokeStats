@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:5000";
+const API_BASE = (import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:5000").replace(/\/$/, "");
 
 function App() {
   const [pokemon, setPokemon] = useState("");
@@ -23,7 +23,7 @@ function App() {
     setError("");
 
     try {
-      const res = await fetch("http://127.0.0.1:5000/api", {
+      const res = await fetch(`${API_BASE}/api`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ pokemon: name }),
