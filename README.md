@@ -18,12 +18,12 @@ https://pokstats.netlify.app/
 
 ## How to run locally
 
-If you want to run locally use these commands for the frontend 
+If you want to run locally use these commands for the frontend: 
 - cd frontend
 - npm install
 - npm run dev
 
-And for the backend
+And for the backend:
 - cd backend
 - python main.py
 
