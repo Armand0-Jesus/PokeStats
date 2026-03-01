@@ -26,7 +26,7 @@ form {
   flex-wrap: wrap;
 }
 
-.pokemon-input {
+pokeInput {
   width: clamp(220px, 36vw, 340px);
   padding: 0.6em 0.9em;   
   font-size: 1.2rem;         
