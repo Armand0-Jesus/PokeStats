@@ -20,8 +20,9 @@
 
 pokeInput {
   padding: 0.6em 0.9em;   
-  font-size: 1.7rem;         
-  border-radius: 8px;     
+  font-size: 2rem;         
+  border-radius: 8px;
+  margin-left: 10px;     
 }
 
 .stats-list {
