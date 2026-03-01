@@ -50,6 +50,7 @@ function App() {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
+          className="pokeInput"
           value={pokemon}
           onChange={(e) => setPokemon(e.target.value)}
           placeholder="Select a Pokemon"
