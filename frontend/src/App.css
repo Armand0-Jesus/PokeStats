@@ -18,20 +18,10 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-}
-
 pokeInput {
-  width: clamp(220px, 36vw, 340px);
   padding: 0.6em 0.9em;   
-  font-size: 1.2rem;         
+  font-size: 1.7rem;         
   border-radius: 8px;     
-  border: 1px solid #666;
 }
 
 .stats-list {
