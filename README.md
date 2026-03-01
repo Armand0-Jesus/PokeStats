@@ -11,8 +11,6 @@ https://pokstats.netlify.app/
 
 ## Features up to now
 
-# PokeStats
-
 - Search Pokemon by name
 - Display Pokemon sprite
 - Show Pokemon type(s)
