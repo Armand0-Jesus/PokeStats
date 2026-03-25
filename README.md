@@ -20,7 +20,7 @@ If you want to run locally use these commands for the backend:
 - cd backend
 - python main.py
 
-And then for the backend:
+And then for the frontend:
 - cd frontend
 - npm install
 - npm run dev
