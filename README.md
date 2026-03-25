@@ -6,7 +6,7 @@ I took inspiration into making this because my nephew hates having to google som
 
 ## Live SIte 
 
-To use the webisite you can just click this link!
+To use the website you can just click this link!
 https://pokstats.netlify.app/
 
 ## Features up to now
