@@ -1,5 +1,7 @@
 # PokeStats
 
+## About the Project 
+
 This is at the moment a very simple and basic website that fetches data from https://pokeapi.co/ and displays all the base stats of any pokemon you want to search for. If someone finds this and wants to make a contribution or add a feature feel free to use a pull request. 
 
 ## Live SIte 
@@ -14,7 +16,7 @@ https://pokstats.netlify.app/
 - Show Pokemon type(s)
 - Show all base stats (HP, Attack, Defense, etc.)
 
-## How to run locally
+## Usage
 
 If you want to run locally use these commands for the backend: 
 - cd backend
