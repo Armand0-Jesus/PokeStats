@@ -4,9 +4,9 @@
 
 This is at the moment a very simple and basic website that fetches data from https://pokeapi.co/ and displays all the base stats of any pokemon you want to search for. If someone finds this and wants to make a contribution or add a feature feel free to use a pull request. 
 
-## Live SIte 
+## Live Site 
 
-To use the website you can just click this link!
+To use the website you can just click this link or the link in the project description!
 https://pokstats.netlify.app/
 
 ## Features up to now
